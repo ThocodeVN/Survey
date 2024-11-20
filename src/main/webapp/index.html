@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survey</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="/main.css" type="text/css"/>
+    </head>
+    <body>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhulIVlIDSkKQx0goaK5OU5Wu8k2bzuUdGqw&s" alt="Murach Logo" width="100"><!-- comment -->
+        <h1 style="color: cadetblue;"> Survey </h1>
+        <p> If you have a moment, we'd appreciate it if you would fill out this <br><!-- comment -->
+            survey.</p>       
+        
+        <form action="SurveyServlet" method="post">
+            <input type="hidden" name="action" value="add">
+            <h1 style ="color: cadetblue;"> Your information: </h1>                       
+            
+            <label>First Name</label>
+            <input type="text" name="firstName" required><br><!-- comment -->
+            
+            <label>Last Name</label>
+            <input type="text" name="lastName" required><br><!-- comment -->
+            
+            <label> Email</label>
+            <input type="email" name="email" required><br>
+            
+            <label> Date of Birth </label>
+            <input type="text" name="dateOfBirth" required><br>
+            
+            <h1 style ="color: cadetblue;">How did you hear about us?</h1><br><!-- comment -->
+            
+            <input type="radio" id="searchEngine" name="source" value ="Search engine"><!-- comment -->
+            <label for="searchEngine">Search engine</label>
+            
+            <input type="radio" id="wordOfMouth" name="source" value ="Word of mouth"><!-- comment -->
+            <label for="wordOfMouth">Word of mouth</label>
+            
+            <input type="radio" id="socialMedia" name="source" value ="Social Media"><!-- comment -->
+            <label for="socialMedia">Social Media</label>
+            
+            <input type="radio" id="other" name="source" value ="Other"><!-- comment -->
+            <label for="other">Other</label>
+            
+            <h1 style="color: cadetblue;">Would you like to receive announcements about <br><!-- comment -->
+                new CDs and special offers?</h1><br>
+            
+            <input type="checkbox" id="op1" name="Yes" value = "Yes, I'd like that">
+            <label for="op1"> Yes, I'd like that</label><br>
+            <input type="checkbox" id="op2" name="Yes, pls" value = "Yes, please send me email annoutcements">
+            <label for="op2"> Yes, please send me email annoucements</label><br>
+            
+            <label for="contact">Please contact me by:</label>
+            <select id="contact" name="contact">
+              <option value="Email or postal mail">Email or postal mail</option>
+              <option value="Number phone">Number phone</option>
+            </select>
+            
+            <input type="submit" value ="Submit">
+        </form>
+    </body>
+</html>
